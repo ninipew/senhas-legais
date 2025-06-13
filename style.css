@@ -1,5 +1,7 @@
+/* Importa as fontes Roboto e Roboto Mono do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
 
+/* Define variáveis CSS (cores, fontes) para reutilização */
 :root{
     --branco: white;
     --cor-de-fundo: #00162E;
@@ -10,37 +12,44 @@
     --roboto-mono: 'Roboto Mono', monospace;
 }
 
+/* Define o peso da fonte padrão para todos os elementos */
 *{
     font-weight: 400;
 }
 
+/* Estilo base do corpo da página */
 body{
-    color: var(--branco);
-    background-color: var(--cor-de-fundo);
-    font-family: var(--roboto);
+    color: var(--branco); /* texto branco */
+    background-color: var(--cor-de-fundo); /* fundo azul escuro */
+    font-family: var(--roboto); /* fonte padrão Roboto */
 }
 
+/* Estiliza o título principal */
 .titulo-principal{
-    font-family: var(--roboto-mono);
+    font-family: var(--roboto-mono); /* fonte monoespaçada */
     font-size: 32px;
 }
 
+/* Estiliza o subtítulo */
 .titulo-secundario{
     font-size: 24px;
 }
 
+/* Centraliza e dá margem ao bloco do título */
 .conteudo-titulo{
     text-align: center;
     margin-top: 80px;
 }
 
+/* Estilo da seção onde a senha é exibida */
 .conteudo-senha{
     margin-top: 80px; 
     background: var(--fundo-senha);
     padding: 24px;
-    border-bottom: 6px solid var(--borda);
+    border-bottom: 6px solid var(--borda); /* linha azul abaixo */
 }
 
+/* Estilo do campo de senha */
 #campo-senha{
     background-color: var(--fundo-senha);
     border: none;
@@ -50,15 +59,18 @@ body{
     width: 70%;
 }
 
+/* Remove a borda de foco do campo de senha */
 #campo-senha:focus{
     outline: none;
 }
 
+/* Define a largura máxima e centraliza o conteúdo */
 .conteudo{
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Estilo do container dos parâmetros de senha */
 .parametro{
     background-color: var(--fundo-texto);
     border: 2px solid var(--borda);
@@ -66,30 +78,37 @@ body{
     padding: 24px;
 }
 
+/* Título da seção de parâmetros */
 .parametro-titulo{
     font-family: var(--roboto-mono);
     font-size: 28px;
 }
 
+/* Título de cada grupo de parâmetros */
 .parametro-senha__titulo{
     font-size:24px;
 }
 
+/* Define layout em coluna dos grupos de parâmetros por padrão */
 .parametro-coluna__senha{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
+/* Centraliza cada grupo de parâmetros */
 .parametro-senha{
     width: 50%;
     margin: 0 auto;
 }
 
+/* Agrupa botões de + e - com o número no centro */
 .parametro-senha-botoes{
     display: flex;
     justify-content: center;
 }
 
+/* Estilo dos botões + e - */
 .parametro-senha__botao{
     background-color: var(--fundo-texto);
     color: var(--branco);
@@ -98,6 +117,8 @@ body{
     font-size: 24px;
     cursor: pointer;
 }
+
+/* Estilo do número de caracteres exibido */
 .parametro-senha__texto{
     padding: 24px;
     border-top: 2px solid var(--borda);
@@ -106,45 +127,57 @@ body{
     font-size: 24px;
 }
 
+/* Estilo dos textos de rótulo */
 label{
     font-size: 20px;
 }
 
+/* Estilo das caixas de seleção */
 .checkbox{
     width: 20px;
     height: 20px;
     cursor: pointer;
 }
 
+/* Barra de fundo da medição de força da senha */
 .barra{
     background-color: var(--fundo-senha);
     height: 30px;
     width: 100%;
 }
+
+/* Barra colorida sobreposta indicando força */
 .forca{
     height: 30px;
     position: relative;
-    bottom: 30px;
+    bottom: 30px; /* sobrepõe a .barra abaixo */
 }
+
+/* Estilo visual para senha fraca */
 .fraca{
     width: 25%;
     background-color: #E71B32; 
 }
+
+/* Estilo visual para senha média */
 .media{
     background-color: #FAF408;
     width: 50%;
 }
+
+/* Estilo visual para senha forte */
 .forte{
     background-color: #00FF85;
     width: 100%;
 }
 
+/* Posiciona os textos "fraca", "média", "forte" abaixo da barra */
 .parametro-senha-textos{
     display: flex;
     justify-content: space-between;
 }
 
-
+/* Responsividade: em telas maiores, organiza os parâmetros lado a lado */
 @media screen and (min-width: 768px) {
     .parametro-coluna__senha{
         flex-direction: row;
